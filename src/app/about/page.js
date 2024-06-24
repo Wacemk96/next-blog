@@ -28,18 +28,19 @@ const About = () => {
                 </h2>
                 <div className="w-12 h-1 bg-[#27D07E] rounded mt-2 mb-4"></div>
                 <p className="text-base">
-                  Full Stack Developer, Freelance and blogger. I just love making website, writing
-                  about on different topics such coding, blogging, linkedin etc.
+                  Full Stack Developer, Freelance and blogger. I just love making websites, writing
+                  about on different topics such as coding, blogging, LinkedIn, etc.
                 </p>
               </div>
             </div>
             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
               <p className="leading-relaxed text-lg mb-4">
-                I'm a Full Stack Developer, freelance professional, and avid blogger. With a passion
-                for creating dynamic and responsive websites, I specialize in both front-end and
-                back-end development, ensuring seamless user experiences and robust functionality.
-                My technical expertise spans a range of programming languages and frameworks,
-                allowing me to tackle diverse projects and bring innovative ideas to life.
+                I&apos;m a Full Stack Developer, freelance professional, and avid blogger. With a
+                passion for creating dynamic and responsive websites, I specialize in both front-end
+                and back-end development, ensuring seamless user experiences and robust
+                functionality. My technical expertise spans a range of programming languages and
+                frameworks, allowing me to tackle diverse projects and bring innovative ideas to
+                life.
               </p>
               <Link
                 href="http://localhost:3000/contact"
@@ -49,9 +50,9 @@ const About = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-4 h-4 ml-2"
                   viewBox="0 0 24 24"
                 >
