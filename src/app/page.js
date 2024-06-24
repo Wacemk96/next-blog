@@ -38,19 +38,6 @@ const Frontpage = async () => {
             key={post.id}
           >
             <Card sx={{display: 'flex', alignItems: 'center', boxShadow: 'none'}}>
-              {/* {post._links['wp:featuredmedia'] && (
-                <Link
-                  href={`blog/${post.slug}`}
-                  passHref
-                >
-                  <CardMedia
-                    component="img"
-                    sx={{width: 270, height: 176}}
-                    image={post._embedded['wp:featuredmedia'][0].source_url}
-                    alt="feature-img"
-                  />
-                </Link>
-              )} */}
               <CardContent sx={{flex: 1}}>
                 <Typography
                   variant="h5"

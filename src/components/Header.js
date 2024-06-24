@@ -14,6 +14,7 @@ import MenuList from '@mui/material/MenuList';
 import {useTheme} from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {Menu as MenuComponent} from '@mui/material';
+import Image from 'next/image';
 
 const Header = () => {
   const theme = useTheme();
@@ -79,10 +80,12 @@ const Header = () => {
           href="/"
           sx={{display: 'flex', alignItems: 'center', textDecoration: 'none'}}
         >
-          <img
+          <Image
             src="/nextblog.png"
             alt="logo"
-            style={{width: '80px', cursor: 'pointer'}}
+            width={80}
+            height={80}
+            style={{cursor: 'pointer'}}
           />
         </Typography>
         <Box sx={{display: 'flex', alignItems: 'center'}}>
