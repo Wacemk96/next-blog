@@ -5,14 +5,9 @@ import Box from '@mui/material/Box';
 import {Avatar, Paper} from '@mui/material';
 
 const Page = async ({params}) => {
-  const data = await getData();
-  const commentData = await getComments();
+  const post = await getData(params.postId);
+  const comments = await getComments(params.postId);
 
-  const post = data.find((post) => post.id.toString() === params.postId);
-
-  const comment = commentData.filter(
-    (commentList) => commentList.postId.toString() === params.postId
-  );
   if (!post) {
     return (
       <Container>
@@ -110,10 +105,10 @@ const Page = async ({params}) => {
             Comments
           </Typography>
 
-          {comment.map((commentsList) => {
+          {comments.map((comment) => {
             return (
               <Box
-                key={commentsList.id}
+                key={comment.id}
                 sx={{display: 'flex', mb: 4}}
               >
                 <Avatar
@@ -125,19 +120,19 @@ const Page = async ({params}) => {
                     variant="subtitle1"
                     sx={{fontWeight: 'bold', textTransform: 'capitalize'}}
                   >
-                    {commentsList.name}{' '}
+                    {comment.name}{' '}
                   </Typography>
                   <Typography
                     variant="body2"
                     sx={{mt: 1}}
                   >
-                    {commentsList.body}
+                    {comment.body}
                   </Typography>
                   <Typography
                     variant="body2"
                     sx={{mt: 1, color: 'blue'}}
                   >
-                    {commentsList.email}
+                    {comment.email}
                   </Typography>
                 </Box>
               </Box>
@@ -151,20 +146,30 @@ const Page = async ({params}) => {
 
 export default Page;
 
-async function getData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
+async function getData(params) {
+  try {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params}`);
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return {error: error.message};
   }
-  const data = await res.json();
-  return data;
 }
 
-async function getComments() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/comments');
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
+async function getComments(params) {
+  try {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${params}`);
+    if (!res.ok) {
+      throw new Error('Failed to fetch Comments');
+    }
+    const comments = await res.json();
+    return comments;
+  } catch (error) {
+    console.error(error);
+    return {error: error.message};
   }
-  const comments = await res.json();
-  return comments;
 }
