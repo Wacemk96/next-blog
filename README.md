@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Blog
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Next.js Blog is a modern blog application built with Next.js, Material-UI, and Tailwind CSS. This project demonstrates how to create a blog with a sleek design and efficient development practices using popular React-based frameworks and libraries.
+
+## Features
+
+- Server-side rendering with Next.js
+- Stylish UI components with Material-UI
+- Custom styling with Tailwind CSS
+- Linting with ESLint for code quality
+
+## Setup and Installation
+
+Follow these steps to set up and run the project locally:
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/next-blog.git
+   cd next-blog
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+## Running the Project
+
+**Install dependencies:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The project dependencies are:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+{
+  "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource/roboto": "^5.0.13",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
+    "@mui/material-nextjs": "^5.15.11",
+    "next": "^14.2.4",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
+```
 
-## Learn More
+## DevDependencies
 
-To learn more about Next.js, take a look at the following resources:
+The project devDependencies are:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+{
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
+```
